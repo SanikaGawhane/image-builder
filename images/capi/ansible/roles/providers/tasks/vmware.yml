@@ -65,6 +65,14 @@
     state: absent
   when: ansible_os_family == "VMware Photon OS"
 
+- name: Create cloud-init config file
+  copy:
+    src: files/etc/cloud/cloud.cfg.d/05_logging.cfg
+    dest: /etc/cloud/cloud.cfg.d/05_logging.cfg
+    owner: root
+    group: root
+    mode: 0644
+
 #- name: Unlock password
 #  replace:
 #    path: /etc/cloud/cloud.cfg
