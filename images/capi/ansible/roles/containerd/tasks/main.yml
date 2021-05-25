@@ -130,7 +130,7 @@
 - name: Copy in containerd config overrides
   template:
     dest: /etc/containerd/config.toml
-    src: etc/containerd/config.toml
+    src: templates/etc/containerd/config.toml
     mode: 0644
 
 - name: Copy in crictl config
